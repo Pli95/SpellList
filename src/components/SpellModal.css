@@ -1,0 +1,42 @@
+.modal {
+    text-align: center;
+}
+.modalRow {
+    display: flex;
+  }
+.modalBox {
+    outline: #698c80 solid 1px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.modalTitle, .modalName, .modalLevel {
+    text-transform: uppercase;
+}
+.modalName,.modalLevel, .card-header {
+    background-color: #698c80;
+    color: white
+}
+.modalTitle {
+    color: #698c80;
+    padding: 0 20px
+}
+.modalBody {
+    padding: 0 20px
+}
+.modalDescriptions, .modalColumn {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    accent-color: #698c80;
+}
+
+.spellTypeCheckbox {
+    margin: 5px;
+}
+
+.btn {
+    background: #8C6975;
+    border: #8C6975;
+}
