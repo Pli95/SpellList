@@ -11,7 +11,7 @@ function SpellList(headerData) {
 
     const handleClose = () => setShow(false);
     const handleShow = function (spell, i) {
-        setModalData(spellTypes[i]);
+        setModalData(filteredSpell[i]);
         setShow(true);
     };
 
@@ -28,6 +28,7 @@ function SpellList(headerData) {
     let spellTypes = []
     let buttons
 
+    //Show more filters depnding on page
     if (listType === "All") {
         spellTypes = Spells
         buttons = <ButtonGroup>
@@ -52,10 +53,13 @@ function SpellList(headerData) {
         buttons = <ButtonGroup>
             <Button onClick={() => filterSpell("All")}>No Filter</Button>
             <DropdownButton id="dropdown-basic-button" title="Filter by Class">
-                <Dropdown.Item onClick={() => filterSpell("Cleric")}>Cleric</Dropdown.Item>
-                <Dropdown.Item onClick={() => filterSpell("Druid")}>Druid</Dropdown.Item>
-                <Dropdown.Item onClick={() => filterSpell("Ranger")}>Ranger</Dropdown.Item>
-                <Dropdown.Item onClick={() => filterSpell("Wizard")}>Wizard</Dropdown.Item>
+                <Dropdown.Item onClick={() => filterSpell("Bard")}>{filter === "Bard" && <FaCheck />}Bard</Dropdown.Item>
+                <Dropdown.Item onClick={() => filterSpell("Cleric")}>{filter === "Cleric" && <FaCheck />}Cleric</Dropdown.Item>
+                <Dropdown.Item onClick={() => filterSpell("Druid")}>{filter === "Druid" && <FaCheck />}Druid</Dropdown.Item>
+                <Dropdown.Item onClick={() => filterSpell("Paladin")}>{filter === "Paladin" && <FaCheck />}Paladin</Dropdown.Item>
+                <Dropdown.Item onClick={() => filterSpell("Ranger")}>{filter === "Ranger" && <FaCheck />}Ranger</Dropdown.Item>
+                <Dropdown.Item onClick={() => filterSpell("Sorcerer")}>{filter === "Sorcerer" && <FaCheck />}Sorcerer</Dropdown.Item>
+                <Dropdown.Item onClick={() => filterSpell("Wizard")}>{filter === "Wizard" && <FaCheck />}Wizard</Dropdown.Item>
             </DropdownButton>
         </ButtonGroup>
     } else {
@@ -63,14 +67,14 @@ function SpellList(headerData) {
         buttons = <ButtonGroup>
             <Button onClick={() => filterSpell("All")}>No Filter</Button>
             <DropdownButton id="dropdown-basic-button" title="Filter by Level">
-                <Dropdown.Item onClick={() => filterSpell("Cantrip")}>Cantrip</Dropdown.Item>
-                <Dropdown.Item onClick={() => filterSpell("1")}>Level 1</Dropdown.Item>
-                <Dropdown.Item onClick={() => filterSpell("2")}>Level 2</Dropdown.Item>
+                <Dropdown.Item onClick={() => filterSpell("Cantrip")}>{filter === "Cantrip" && <FaCheck />}Cantrip</Dropdown.Item>
+                <Dropdown.Item onClick={() => filterSpell("1")}>{filter === "1" && <FaCheck />}Level 1</Dropdown.Item>
+                <Dropdown.Item onClick={() => filterSpell("2")}>{filter === "2" && <FaCheck />}Level 2</Dropdown.Item>
             </DropdownButton>
         </ButtonGroup>
     }
 
-    
+
 
     //filter from dropdown
     if (filter === "All") {
@@ -78,6 +82,7 @@ function SpellList(headerData) {
     } else {
         filteredSpell = spellTypes.filter(item => (item.class.includes(filter)) || (item.level === filter))
     }
+    console.log(filteredSpell)
 
     return (
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -99,7 +104,6 @@ function SpellList(headerData) {
 
                     })
                     .map((spell, i) => {
-                        // console.log(i)
                         return (
                             <Card
                                 style={{ width: '18rem', cursor: 'pointer' }}
