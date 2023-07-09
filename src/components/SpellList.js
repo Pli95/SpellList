@@ -167,8 +167,8 @@ function SpellList(headerData) {
                         <div className="modalBody">{modalData.damage}</div>
                     </div>
                     <div className="modalBox">
-                        <div className="modalTitle">Attack Bonus</div>
-                        <div className="modalBody">{modalData.attack_bonus}</div>
+                        <div className="modalTitle">Damage Type</div>
+                        <div className="modalBody">{modalData.damage_type}</div>
                     </div>
                     <div className="modalBox">
                         <div className="modalTitle">Save DC</div>
@@ -221,6 +221,7 @@ function SpellList(headerData) {
                                 {modalData.description.p4 && <li>{modalData.description.p4}</li>}
                                 {modalData.description.p5 && <li>{modalData.description.p5}</li>}
                                 {modalData.description.p6 && <li>{modalData.description.p6}</li>}
+                                {modalData.description.p7 && <li>{modalData.description.p7}</li>}
                             </ul>
                             {modalData.description.pEnd && <div className="modalBody" style={{ textAlign: "left" }}>{modalData.description.pEnd}</div>}
 
