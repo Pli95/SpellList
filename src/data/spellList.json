@@ -3637,6 +3637,43 @@
     {
         "casting_time": "1 action",
         "class": [
+            "Cleric", "Druid", "Sorcerer"
+        ],
+        "components": {
+            "item": "A pinch of dirt, a piece of rock, and a lump of clay",
+            "m": true,
+            "s": true,
+            "v": true
+        },
+        "concentration": true,
+        "damage": "",
+        "damage_type": "",
+        "description": {
+            "p": "You create a seismic disturbance at a point on the ground that you can see within range. For the duration, an intense tremor rips through the ground in a 100-foot-radius circle centered on that point and shakes creatures and structures in contact with the ground in that area. The ground in the area becomes difficult terrain. Each creature on the ground that is concentrating must make a Constitution saving throw. On a failed save, the creature’s concentration is broken. When you cast this spell and at the end of each turn you spend concentrating on it, each creature on the ground in the area must make a Dexterity saving throw. On a failed save, the creature is knocked prone. This spell can have additional effects depending on the terrain in the area, as determined by the GM.",
+            "p1": "Fissures. Fissures open throughout the spell's area at the start of your next turn after you cast the spell. A total of 1d6 such fissures open in locations chosen by the DM. Each is 1d10 x 10 feet deep, 10 feet wide, and extends from one edge of the spell's area to the opposite side. A creature standing on a spot where a fissure opens must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure's edge as it opens. A fissure that opens beneath a structure causes it to automatically collapse (see below).",
+            "p2": "Structures. The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start of each of your turns until the spell ends. If a structure drops to 0 hit points, it collapses and potentially damages nearby creatures. A creature within half the distance of a structure's height must make a Dexterity saving throw. On a failed save, the creature takes 5d6 bludgeoning damage, is knocked prone, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. The DM can adjust the DC higher or lower, depending on the nature of the rubble. On a successful save, the creature takes half as much damage and doesn't fall prone or become buried."
+        },
+        "duration": "Up to 1 min",
+        "higher_level": "",
+        "level": "8",
+        "name": "Earthquake",
+        "quick_info": "You create a seismic disturbance at a point on the ground.",
+        "range": "500 feet",
+        "save_dc": "",
+        "spell_type": {
+            "ABJ": false,
+            "CON": false,
+            "DIV": false,
+            "ENC": false,
+            "EVO": true,
+            "ILL": false,
+            "NEC": false,
+            "TRA": false
+        }
+    },
+    {
+        "casting_time": "1 action",
+        "class": [
             "Warlock"
         ],
         "components": {
@@ -3646,8 +3683,8 @@
             "v": true
         },
         "concentration": false,
-        "damage": "",
-        "damage_type": "",
+        "damage": "1d10",
+        "damage_type": "Force",
         "description": {
             "p": "A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage. The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam."
         },
@@ -3763,8 +3800,8 @@
             "v": true
         },
         "concentration": true,
-        "damage": "",
-        "damage_type": "",
+        "damage": "1d6",
+        "damage_type": "Piercing",
         "description": {
             "p": "The next time you hit a creature with a weapon attack before this spell ends, a writhing mass of thorny vines appears at the point of impact, and the target must succeed on a Strength saving throw or be restrained by the magical vines until the spell ends. A Large or larger creature has advantage on this saving throw. If the target succeeds on the save, the vines shrivel away. While restrained by this spell, the target takes 1d6 piercing damage at the start of each of its turns. A creature restrained by the vines or one that can touch the creature can use its action to make a Strength check against your spell save DC. ON a success, the target is freed."
         },
@@ -3774,7 +3811,7 @@
         "name": "Ensnaring Strike",
         "quick_info": "You hit a creature with a weapon attack and a writhing mass of thorny vines appears at the point of impact",
         "range": "Self",
-        "save_dc": "",
+        "save_dc": "Strength",
         "spell_type": {
             "ABJ": false,
             "CON": true,
@@ -3803,12 +3840,12 @@
         "description": {
             "p": "Grasping weeds and vines sprout from the ground in a  20-foot square starting from a point within range. For the duration, these plants turn the ground in the area into difficult terrain. A creature in the area when you cast the spell must succeed on a Strength saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself. When the spell ends, the conjured plants wilt away."
         },
-        "duration": "1 min",
+        "duration": "Up to 1 min",
         "higher_level": "",
         "level": "1",
         "name": "Entangle",
         "quick_info": "Restrain with weed and vine",
-        "range": "90 feet (20 sq feet)",
+        "range": "90 feet",
         "save_dc": "Strength",
         "spell_type": {
             "ABJ": false,
@@ -3859,6 +3896,43 @@
         }
     },
     {
+        "casting_time": "1 action",
+        "class": [
+            "Bard", "Cleric","Sorcerer",
+            "Warlock", "Wizard"
+        ],
+        "components": {
+            "item": "",
+            "m": false,
+            "s": true,
+            "v": true
+        },
+        "concentration": false,
+        "damage": "",
+        "damage_type": null,
+        "description": {
+            "p": "You step into the border regions of the Ethereal Plane, in the area where it overlaps with your current plane. You remain in the Border Ethereal for the duration or until you use your action to dismiss the spell. During this time, you can move in any direction. If you move up or down, every foot of movement costs an extra foot. You can see and hear the plane you originated from, but everything there looks gray, and you can’t see anything more than 60 feet away. While on the Ethereal Plane, you can only affect and be affected by other creatures on that plane. Creatures that aren’t on the Ethereal Plane can’t perceive you and can’t interact with you, unless a special ability or magic has given them the ability to do so. You ignore all objects and effects that aren’t on the Ethereal Plane, allowing you to move through objects you perceive on the plane you originated from. When the spell ends, you immediately return to the plane you originated from in the spot you currently occupy. If you occupy the same spot as a solid object or creature when this happens, you are immediately shunted to the nearest unoccupied space that you can occupy and take force damage equal to twice the number of feet you are moved. This spell has no effect if you cast it while you are on the Ethereal Plane or a plane that doesn’t border it, such as one of the Outer Planes."
+        },
+        "duration": "Up to 8 hours",
+        "higher_level": "When you cast this spell using a spell slot of 8th level or higher, you can target up to three willing creatures (including you) for each slot level above 7th. The creatures must be within 10 feet of you when you cast the spell.",
+        "level": "7",
+        "name": "Etherealness",
+        "quick_info": "You step into the border regions of the Ethereal Plane.",
+        "range": "Self",
+        "ritual": false,
+        "save_dc": "",
+        "spell_type": {
+            "ABJ": false,
+            "CON": false,
+            "DIV": false,
+            "ENC": false,
+            "EVO": false,
+            "ILL": false,
+            "NEC": false,
+            "TRA": true
+        }
+    },
+    {
         "casting_time": "1 bonus action",
         "class": [
             "Sorcerer",
@@ -3893,6 +3967,46 @@
             "ILL": false,
             "NEC": false,
             "TRA": true
+        }
+    },
+    {
+        "casting_time": "1 action",
+        "class": [
+            "Bard", "Sorcerer",
+            "Warlock",
+            "Wizard"
+        ],
+        "components": {
+            "item": "",
+            "m": false,
+            "s": true,
+            "v": true
+        },
+        "concentration": true,
+        "damage": "",
+        "damage_type": "",
+        "description": {
+            "p": "For the spell's duration, your eyes become an inky void imbued with dread power. One creature of your choice within 60 feet of you that you can see must succeed on a Wisdom saving throw or be affected by one of the following effects of your choice for the duration. On each of your turns until the spell ends, you can use your action to target another creature but can't target a creature again if it has succeeded on a saving throw against this casting of Eyebite.",
+            "p1": "Asleep: The target falls unconscious. It wakes up if it takes any damage or if another creature uses its action to shake the sleeper awake.",
+            "p2": "Panicked: The target is frightened of you. On each of its turns, the frightened creature must take the Dash action and move away from you by the safest and shortest available route, unless there is nowhere to move. If the target moves to a place at least 60 feet away from you where it can no longer see you, this effect ends.",
+            "p3": "Sickened: The target has disadvantage on attack rolls and ability checks. At the end of each of its turns, it can make another Wisdom saving throw. If it succeeds, the effect ends."
+        },
+        "duration": "Up to 1 min",
+        "higher_level": "",
+        "level": "6",
+        "name": "Eyebite",
+        "quick_info": "For the spell's duration, your eyes become an inky void imbued with dread power.",
+        "range": "Self",
+        "save_dc": "Wisdom",
+        "spell_type": {
+            "ABJ": false,
+            "CON": false,
+            "DIV": false,
+            "ENC": false,
+            "EVO": false,
+            "ILL": false,
+            "NEC": true,
+            "TRA": false
         }
     },
     {
