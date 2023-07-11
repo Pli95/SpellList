@@ -88,7 +88,8 @@ function SpellList(headerData) {
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
             <span style={{ width: '100%', textAlign: 'left', padding: '10px' }}>
                 {buttons}
-                {/* <Badge pill>Druid</Badge> */}
+                <Badge pill>{listType}</Badge>
+                <Badge pill>{filter}</Badge>
             </span>
 
             {
