@@ -223,6 +223,10 @@ function SpellList(headerData) {
                                 {modalData.description.p5 && <li>{modalData.description.p5}</li>}
                                 {modalData.description.p6 && <li>{modalData.description.p6}</li>}
                                 {modalData.description.p7 && <li>{modalData.description.p7}</li>}
+                                {modalData.description.p8 && <li>{modalData.description.p8}</li>}
+                                {modalData.description.p9 && <li>{modalData.description.p9}</li>}
+                                {modalData.description.p10 && <li>{modalData.description.p10}</li>}
+
                             </ul>
                             {modalData.description.pEnd && <div className="modalBody" style={{ textAlign: "left" }}>{modalData.description.pEnd}</div>}
 
